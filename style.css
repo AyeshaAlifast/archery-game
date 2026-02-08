@@ -1,62 +1,111 @@
 body {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
-#heading h1 {
-  color: #b36217;
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-#stage {
-  width: 400px;
-  height: 400px;
-  border: 10px solid #CDB885;
-  background-color: #EFE1B5;
-  position: relative;
-  margin-top: 20px;
-  overflow: hidden;
+  background-image: url('background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
 }
 
-#box {
-  width: 80px;
-  height: 80px;
-  background-color: #7e4510e2;
-  position: absolute;
-  top: 75px;
-  left: 0;
-
-}
-
-#box:hover {
-  background-color: #a76d36;
-  transform: scale(1.2);
-  cursor: pointer;
+#title {
+  font-family: 'cinzel-serig', sans-serif;
+  color: rgba(26, 42, 58, 0.8);
+  text-shadow: 2px 2px 0px rgba(195, 100, 5, 0.2);
+  position: sticky;
+  text-align: center;
+  top: 40px;
 }
 
 #startButton {
-  padding: 15px;
-  background-color: #6E5034;
-  color: #FFFFFF;
-  border: none;
-  font-weight: bold;
+  margin: 15px auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #88c082;
+  color: white;
+  border: 2px solid #1a2a3a28;
+  border-radius: 15px;
   cursor: pointer;
-  border-radius: 5px;
-  display: block;
-  width: 120px;
-  margin: 10px 0;
-  transform: translateX(-140px)
+  left: 20%;
+  box-shadow: 0 10px 30px #88c082;
 }
 
+#startButton:hover {
+  background-color: rgba(95, 158, 160, 0.431);
+  color: solid rgb(197, 217, 226);
+  box-shadow: 0 0 15px rgba(136, 192, 130, 0.3)
+}
 
-#startButton:active {
-  transform: translateX(-140px) scale(0.95);
+#target {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+#topContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30%;
+  padding: 15px;
+  font: 'cinzel-serig', sans-serif;
+  background-color: rgba(255, 243, 243, 0.261);
+  border-radius: 10px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.record {
+  background-color: #88c082;
+  color: white;
+  border: 2px solid #5d8c58;
+  padding: 5%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px #88c082;
+  min-width: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#score {
+  font-family: 'cinzel-serig', sans-serif;
+  font-size: 30px;
+  color: #5d8c58;
+}
+
+#Tarrows {
+  font-size: 40px
+}
+
+#game-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 450px;
+  background-color: #5d8c5848;
+  margin-top: 5%;
+}
+
+#box,
+#arrow,
+#target {
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #5d8c5800;
+}
+
+#arrow {
+  background-image: url('arrow.png');
+}
+
+#target {
+  background-image: url('shooting_target.png');
 }
