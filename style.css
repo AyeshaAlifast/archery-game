@@ -17,7 +17,6 @@ body {
 }
 
 #startButton {
-  margin: 15px auto;
   padding: 10px 20px;
   font-size: 20px;
   background-color: #88c082;
@@ -25,14 +24,24 @@ body {
   border: 2px solid #1a2a3a28;
   border-radius: 15px;
   cursor: pointer;
-  left: 20%;
+  align-items: flex-start;
   box-shadow: 0 10px 30px #88c082;
 }
 
 #startButton:hover {
-  background-color: rgba(95, 158, 160, 0.431);
   color: solid rgb(197, 217, 226);
   box-shadow: 0 0 15px rgba(136, 192, 130, 0.3)
+}
+
+#level {
+  font-size: 40px;
+  background-color: #88c082;
+  color: white;
+  border: 2px solid #1a2a3a28;
+  border-radius: 15px;
+  cursor: pointer;
+  left: 5%;
+  box-shadow: 0 10px 30px #88c082;
 }
 
 #target {
@@ -45,7 +54,7 @@ body {
 #topContainer {
   display: flex;
   justify-content: center;
-  gap: 30%;
+  gap: 25%;
   padding: 15px;
   font: 'cinzel-serig', sans-serif;
   background-color: rgba(255, 243, 243, 0.261);
@@ -81,31 +90,86 @@ body {
 }
 
 #game-area {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
+  position: relative;
   height: 450px;
-  background-color: #5d8c5848;
-  margin-top: 5%;
+  overflow: hiddin;
 }
 
-#box,
+#bow,
 #arrow,
 #target {
-  width: 80px;
-  height: 80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #5d8c5800;
+  position: absolute;
+}
+
+#bow {
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url('bow_n_arrow.png');
+  width: 160px;
+  height: 160px;
+  z-index: 5;
 }
 
 #arrow {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+
+  top: 50%;
+  left: 10%;
+
+  transform: translateY(-50%);
+  z-index: 10;
   background-image: url('arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
 }
 
 #target {
+  right: 10%;
+  top: 50%;
+  width: 130px;
+  height: 130px;
   background-image: url('shooting_target.png');
+  transform: translateY(-50%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#start {
+  display: flex;
+  align-items: flex-start;
+  gap: 100%;
+  margin-left: 5px
+}
+
+#level-menu {
+  position: absolute;
+  top: 15%;
+  background-color: #1a2a3a28;
+  border: 2px solid #88c082;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+}
+
+#level-menu button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#level-menu button:hover {
+  background: #88c082;
 }

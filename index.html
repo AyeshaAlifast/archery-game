@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Archery Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1 id="title">Draw and Release</h1>
 
     <!-- start ,scores and arrows -->
     <div id="topContainer">
-      <div><button id="startButton">Start</button></div>
+      <div id="start">
+        <div>
+          <button id="level">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <div id="level-menu" class="hidden">
+            <button onclick="setLevel('easy')">easy</button>
+            <button onclick="setLevel('medium')">medium</button>
+            <button onclick="setLevel('hard')">hard</button>
+          </div>
+        </div>
+        <div><button id="startButton" onclick="shoot()">Start</button></div>
+      </div>
       <div class="stats">
         <div id="score">Score:</div>
         <div id="scorebox" class="record">0</div>
@@ -23,8 +39,8 @@
     </div>
     <!-- the game images -->
     <div id="game-area">
-      <div id="arrow"></div>
       <div id="bow"></div>
+      <div id="arrow"></div>
       <div id="target"></div>
     </div>
   </body>
