@@ -122,7 +122,7 @@ body {
   top: 50%;
   left: 10%;
 
-  transform: translateY(-50%);
+  transform: translateY(-56%);
   z-index: 10;
   background-image: url('arrow.png');
   background-size: contain;

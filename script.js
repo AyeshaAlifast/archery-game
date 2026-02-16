@@ -109,8 +109,8 @@ function resetArrow(msg) {
     isFlying = false;
     
     // Snap arrow back to the bow position
-    arrow.style.left = "12%";
-    arrow.style.top = "52%";
+    arrow.style.left = "10%";
+    arrow.style.top = "50%";
     arrow.style.transform = "translateY(-50%) rotate(0deg)";
     
     if (arrowsLeft <= 0) {
